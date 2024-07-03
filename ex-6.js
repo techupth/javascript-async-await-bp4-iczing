@@ -32,4 +32,18 @@ let getJohnOrders = () => {
   });
 };
 
-// Start coding here
+async function executeAsyncOperations() {
+  try {
+    // Execute getJohnProfile and log the result
+    const johnProfile = await getJohnProfile();
+    console.log(johnProfile);
+
+    // Execute getJohnOrders and log the result
+    const johnOrders = await getJohnOrders();
+    console.log(johnOrders);
+  } catch (error) {
+    console.error('Error in executing async operations:', error);
+  }
+}
+
+executeAsyncOperations();
